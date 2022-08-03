@@ -24,8 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wmh&dpro*em)!fi$%=y1)7!x#)i4yi5zs$g3=r^)-9e+st9*b@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
 ALLOWED_HOSTS = ['https://myblogsite12.herokuapp.com/', '127.0.0.1']
 
 
@@ -122,8 +121,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-django_heroku.settings(locals())
+STATICFILES_DIRS = 
+[
+os.path.join(BASE_DIR, 'static')
+]
+    
+    django_heroku.settings(locals())
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
